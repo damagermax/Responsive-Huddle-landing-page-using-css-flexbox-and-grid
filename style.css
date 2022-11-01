@@ -29,7 +29,7 @@ html {
 body {
   background-image: url("images/bg-desktop.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   min-height: 100vh;
   background-color: var(--Violet);
 }
@@ -111,6 +111,12 @@ main {
 @media (max-width: 1160px) {
   html {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 1116px) {
+  body {
+    background-size: cover;
   }
 }
 
