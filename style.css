@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+
+  /*  fons */
+  --poppins: "Poppins", sans-serif;
+  --open-sans: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  background-image: url("images/bg-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-color: var(--Violet);
+}
+main {
+  padding: 3% 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+}
+
+.hero .image {
+  max-width: 100%;
+}
+
+.hero_content {
+  color: white;
+  margin-left: 2rem;
+}
+.hero .title {
+  font-family: var(--poppins);
+  font-weight: 600;
+}
+.hero .desc {
+  font-family: var(--open-sans);
+  font-size: 400;
+  margin-block: 2rem 1.5rem;
+}
+
+.register-cta {
+  display: inline-block;
+  background-color: white;
+  padding: 1rem 4rem;
+  font-family: var(--poppins);
+  font-weight: 400;
+  color: var(--Violet);
+  border-radius: 3rem;
+  box-shadow: 0px 7px 11px 1px rgba(0, 0, 0, 0.23);
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+.register-cta:hover {
+  background-color: var(--Soft-Magenta);
+  cursor: pointer;
+  color: white;
+}
+
+.social_icons {
+  text-align: right;
+}
+
+.icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: white 1.5px solid;
+  padding: 10px;
+  border-radius: 50px;
+  margin-left: 1rem;
+  text-align: center;
+  transition: border-color 300ms ease, color 300ms ease;
+  font-size: 20px;
+}
+
+.icon:hover {
+  color: var(--Soft-Magenta);
+  border-color: var(--Soft-Magenta);
+}
+
+/* ! meadi queries */
+
+@media (max-width: 1160px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 856px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    margin-block: 5rem;
+  }
+
+  .hero_content {
+    margin-left: 0;
+  }
+  body {
+    background-image: url("images/bg-mobile.svg");
+    background-size: contain;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-container {
+    margin-block: 5rem;
+  }
+
+  .hero_content {
+    text-align: center;
+  }
+
+  .register-cta {
+    padding-inline: 6rem;
+  }
+  .social_icons {
+    text-align: center;
+  }
+}
